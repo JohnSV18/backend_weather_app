@@ -12,7 +12,7 @@ class Config:
     FLASK_ENV = environ.get("FLASK_ENV")
     FLASK_APP = "run.py"
 
-    # Staement for enabling the development environment
+    # Statement for enabling the development environment
     DEBUG = True
 
     # Specifying host and port for our server
@@ -21,5 +21,11 @@ class Config:
 
     BASE_URL = "https://api.openweathermap.org/data/2.5/weather?"
     URL = BASE_URL + "q=san francisco&appid=4647aaef88d6e0fbf8feeb4ce0f0cb50"
+
+    MONGODB_SETTINGS = {
+        'db': 'WeatherApp',
+        'host': environ.get('MONGO_URI'),
+        'connect': True
+    }
 
 
